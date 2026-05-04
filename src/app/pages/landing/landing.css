@@ -1,0 +1,222 @@
+/* TEC FUEL Theme Variables */
+:root {
+  --primary-color: #1A3062;
+  --secondary-color: #c41e3a;
+  --accent-color: #002d5c;
+  --light-bg: #f9f9f9;
+}
+
+/* Override Semantic UI Primary Button Color */
+.ui.primary.button,
+.ui.primary.buttons .button {
+  background-color: var(--primary-color) !important;
+}
+
+.ui.primary.button:hover,
+.ui.primary.buttons .button:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+/* Navigation Bar */
+.navbar-tec {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 60px !important;
+}
+
+.navbar-tec .item {
+  color: var(--primary-color) !important;
+  font-weight: 500 !important;
+}
+
+.navbar-tec .item:hover {
+  color: var(--secondary-color) !important;
+}
+
+.logo-image {
+  height: 70px;
+  width: auto;
+}
+
+/* Hero Section */
+.hero-tec {
+  background: url('/cover.png') center bottom/cover no-repeat;
+  color: white;
+  padding: 0;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-button {
+  padding: 15px 50px !important;
+  font-size: 1.2rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hero-button:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+.about-tec {
+  background-color: var(--light-bg) !important;
+  padding: 80px 20px !important;
+}
+
+.about-tec .header {
+  color: var(--primary-color) !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+}
+
+.feature-card {
+  transition: transform 0.3s, box-shadow 0.3s !important;
+  border-top: 4px solid var(--secondary-color) !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.feature-card .header {
+  color: var(--primary-color) !important;
+  font-size: 1.5rem !important;
+}
+
+/* Services Section */
+.services-tec {
+  background-color: white !important;
+  padding: 80px 20px !important;
+}
+
+.services-tec .header {
+  color: var(--primary-color) !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+}
+
+.service-card {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+  color: white !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.service-card .header {
+  color: white !important;
+}
+
+.service-card p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Contact Section */
+.contact-tec {
+  background-color: var(--light-bg) !important;
+  padding: 80px 20px !important;
+}
+
+.contact-tec .header {
+  color: var(--primary-color) !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+}
+
+.contact-form .field input,
+.contact-form .field textarea {
+  border: 2px solid #ddd !important;
+  transition: border-color 0.3s !important;
+}
+
+.contact-form .field input:focus,
+.contact-form .field textarea:focus {
+  border-color: var(--primary-color) !important;
+}
+
+/* Footer */
+.footer-tec {
+  background-color: #1a1a1a !important;
+  color: white !important;
+  text-align: center !important;
+  padding: 2rem !important;
+  margin-top: 0 !important;
+}
+
+.footer-tec p {
+  margin: 0 !important;
+}
+
+/* Semantic UI Menu Logo Override */
+.ui.menu .item > img:not(.ui) {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -.3em 0;
+}
+
+/* Responsive Grid */
+@media only screen and (max-width: 768px) {
+  .ui.three.column.grid,
+  .ui.four.column.grid {
+    flex-direction: column !important;
+  }
+
+  .ui.three.column.grid > .column,
+  .ui.four.column.grid > .column {
+    width: 100% !important;
+  }
+
+  .hero-tec {
+    height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .navbar-tec .right.menu {
+    display: none;
+  }
+
+  .navbar-tec {
+    margin-bottom: 40px !important;
+  }
+}
