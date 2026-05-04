@@ -21,7 +21,11 @@
 .navbar-tec {
   background-color: #ffffff !important;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
-  margin-bottom: 60px !important;
+  position: relative !important;
+}
+
+.navbar-tec .ui.container {
+  position: relative;
 }
 
 .navbar-tec .right.menu .item {
@@ -34,6 +38,81 @@
 .navbar-tec .right.menu .item:hover {
   color: var(--secondary-color) !important;
   border-bottom-color: var(--primary-color) !important;
+}
+
+/* Tooltip Styling */
+.ui.popup {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  padding: 10px 12px !important;
+  font-size: 0.9rem !important;
+}
+
+.ui.popup::before {
+  background-color: white !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Product Menu Dropdown Modal */
+.product-menu-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.product-menu-wrapper.center-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-menu-wrapper .item {
+  color: var(--primary-color) !important;
+  font-weight: 500 !important;
+  border-bottom: 3px solid transparent !important;
+  transition: border-color 0.4s ease, color 0.3s ease !important;
+  display: inline-block !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+}
+
+.product-menu-wrapper .item:hover {
+  color: var(--secondary-color) !important;
+  border-bottom-color: var(--primary-color) !important;
+}
+
+.product-dropdown-modal {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 90vw;
+  max-width: 1000px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.product-menu-wrapper:hover .product-dropdown-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.product-dropdown-modal .modal-content {
+  color: var(--primary-color);
 }
 
 .logo-image {
