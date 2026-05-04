@@ -24,18 +24,21 @@
   margin-bottom: 60px !important;
 }
 
-.navbar-tec .item {
+.navbar-tec .right.menu .item {
   color: var(--primary-color) !important;
   font-weight: 500 !important;
+  border-bottom: 3px solid transparent !important;
+  transition: border-color 0.4s ease, color 0.3s ease !important;
 }
 
-.navbar-tec .item:hover {
+.navbar-tec .right.menu .item:hover {
   color: var(--secondary-color) !important;
+  border-bottom-color: var(--primary-color) !important;
 }
 
 .logo-image {
-  height: 70px;
-  width: auto;
+  height: 50px;
+  width: 100px !important;
 }
 
 /* Hero Section */
